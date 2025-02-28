@@ -6,4 +6,9 @@
   --color-body-bg: rgba(244, 247, 255, 1);
   --color-blt-primary: rgba(0, 48, 60, 1);
   --color-gray-primary: rgba(244, 247, 255, 1);
+  --color-gray-2: rgba(244, 247, 255, 1);
+  --color-blue-primary: rgba(55, 82, 253, 1);
+  --color-purple-primary: rgba(108, 127, 250, 1);
+  --color-purple-secondary: rgba(155, 168, 248, 1);
+  --color-purple-border: rgba(55, 82, 253, 0.2);
 }
