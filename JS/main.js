@@ -27,7 +27,6 @@ totalTaskCount.innerText = numAssigned;
 const compTasksNav = document.getElementById("tasks-comp"); //Getting the tag containing completed tasks in Navbar.
 const activityLog = document.getElementById("activity-log");
 
-
 function reduceTaskCount() { //Function for reducing task count
   let tCount = totalTaskCount.innerText;
   let intTaskCount = parseInt(tCount);
@@ -54,7 +53,6 @@ for (const btn of completeButton) {
     // Reduce the task count when clicked
     const updatedTaskCount = reduceTaskCount();
     totalTaskCount.innerText = updatedTaskCount;
-    console.log(updatedTaskCount);
     
     //Update Completed tasks in Nav
     compTasksNav.innerText=incrementTaskCount();
@@ -81,6 +79,16 @@ for (const btn of completeButton) {
     }
   });
 }
+
+// Clear History
+const clrHistBtn = document.getElementById("clr-hist-btn");
+
+clrHistBtn.addEventListener("click", function(){
+  const activities = document.querySelectorAll(".added-act");
+  for(act of activities){
+    act.remove();
+  }
+})
 
 
 
