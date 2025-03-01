@@ -90,6 +90,32 @@ clrHistBtn.addEventListener("click", function(){
   }
 })
 
+// Random Color in body
+
+function randomColor(){
+  const chars = ['0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F','a','b','c','d','e','f'];
+  let colorHash= '#';
+
+  for(i=0; i<6; i++){
+    let index = Math.floor(Math.random()*16);
+    let colorHex = chars[index];
+    colorHash+=colorHex;
+  }
+  return colorHash;
+}
+
+const colorChangeBtn = document.getElementById("color-chng-btn");
+let newColor = "";
+
+colorChangeBtn.addEventListener("click", function() {
+  let randGenCol = randomColor();
+
+  if (document.body.classList.contains("bg-body-bg")) {
+    document.body.classList.remove("bg-body-bg");
+  }
+  document.body.style.backgroundColor = randGenCol;
+  newColor = randGenCol;
+});
 
 
 
