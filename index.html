@@ -23,7 +23,7 @@
       <div class="px-6 py-4 flex items-center gap-8">
         <div class="flex w-auto h-full gap-4 items-center bg-gray-primary rounded-full py-4 px-4">
           <img src="./assets/checkbox.png" alt="checkbox-icon" class="w-full h-full">
-          <h3 class="font-poppins text-3xl font-bold text-blt-primary">23</h3>
+          <h3 id="tasks-comp" class="font-poppins text-3xl font-bold text-blt-primary"></h3>
         </div>
 
         <div class="bg-gray-primary rounded-full px-3 py-3 max-w-max">
@@ -48,7 +48,7 @@
 
             <div>
               <p class="text-base text-blt-primary">Task Assigned</p>
-              <h2 class="text-3xl font-bold text-blt-primary">05</h2>
+              <h2 id="assigned-tasks" class="text-3xl font-bold text-blt-primary"></h2>
             </div>
           </div>
 
@@ -60,7 +60,7 @@
           </div>
 
 
-          <!-- task assigned -->
+          <!-- Current date -->
           <div class="bg-gray-2 col-span-5 px-6 py-8 flex items-center gap-5 rounded-xl">
             <div class="w-16 h-16 px-4 py-4 rounded-full bg-white flex justify-center items-center">
               <img src="./assets/calender.png" alt="calender-icon" class="max-w-8">
@@ -78,9 +78,9 @@
         <div class="grid grid-cols-3 grid-rows-2 gap-9 pt-8">
 
           <!-- Card 1 -->
-          <div class="bg-gray-2 px-4.5 py-6 rounded-2xl">
+          <div class="task-card bg-gray-2 px-4.5 py-6 rounded-2xl">
             <p class="bg-white rounded-lg max-w-max px-4 py-2 text-blt-primary">ShopEase</p>
-            <h2 class="text-blt-primary font-medium text-2xl mt-4">Fix Mobile Button Issue</h2>
+            <h2 class="card-title text-blt-primary font-medium text-2xl mt-4">Fix Mobile Button Issue</h2>
 
             <div class="bg-white max-h-24 mt-4 p-4 overflow-hidden rounded-xl">
               <p class="text-base text-gray-500 text-ellipsis overflow-hidden leading-6 line-clamp-2">
@@ -91,22 +91,22 @@
 
             <div class="border border-dashed border-purple-border my-4"></div>
 
-            <div class="flex justify-between">
+            <div class="card-bottom flex justify-between">
               <div>
                 <p class="text-blt-primary opacity-70">Deadline</p>
                 <p class="text-blt-primary text-lg font-medium">21 March, 2025</p>
               </div>
 
-              <button type="submit"
-                class="bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
+              <button type="button"
+                class="comp-btn bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
             </div>
 
           </div>
 
           <!-- Card 2 -->
-          <div class="bg-gray-2 px-4.5 py-6 rounded-2xl">
+          <div class="task-card bg-gray-2 px-4.5 py-6 rounded-2xl">
             <p class="bg-white rounded-lg max-w-max px-4 py-2 text-blt-primary">CloudSync</p>
-            <h2 class="text-blt-primary font-medium text-2xl mt-4">Add Dark Mode</h2>
+            <h2 class="card-title text-blt-primary font-medium text-2xl mt-4">Add Dark Mode</h2>
 
             <div class="bg-white max-h-24 mt-4 p-4 overflow-hidden rounded-xl">
               <p class="text-base text-gray-500 text-ellipsis overflow-hidden leading-6 line-clamp-2">
@@ -123,15 +123,15 @@
                 <p class="text-blt-primary text-lg font-medium">21 March, 2025</p>
               </div>
 
-              <button type="submit"
-                class="bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
+              <button type="button"
+                class="comp-btn bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
             </div>
           </div>
 
           <!-- Card 3 -->
-          <div class="bg-gray-2 px-4.5 py-6 rounded-2xl">
+          <div class="task-card bg-gray-2 px-4.5 py-6 rounded-2xl">
             <p class="bg-white rounded-lg max-w-max px-4 py-2 text-blt-primary">SwiftPay</p>
-            <h2 class="text-blt-primary font-medium text-2xl mt-4">Optimize Home Page</h2>
+            <h2 class="card-title text-blt-primary font-medium text-2xl mt-4">Optimize Home Page</h2>
 
             <div class="bg-white max-h-24 mt-4 p-4 overflow-hidden rounded-xl">
               <p class="text-base text-gray-500 text-ellipsis overflow-hidden leading-6 line-clamp-2">
@@ -148,15 +148,15 @@
                 <p class="text-blt-primary text-lg font-medium">21 March, 2025</p>
               </div>
 
-              <button type="submit"
-                class="bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
+              <button type="button"
+                class="comp-btn bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
             </div>
           </div>
 
           <!-- Card 4 -->
-          <div class="bg-gray-2 px-4.5 py-6 rounded-2xl">
+          <div class="task-card bg-gray-2 px-4.5 py-6 rounded-2xl">
             <p class="bg-white rounded-lg max-w-max px-4 py-2 text-blt-primary">Meta</p>
-            <h2 class="text-blt-primary font-medium text-2xl mt-4">Add new emoji 🤲</h2>
+            <h2 class="card-title text-blt-primary font-medium text-2xl mt-4">Add new emoji 🤲</h2>
 
             <div class="bg-white max-h-24 mt-4 p-4 overflow-hidden rounded-xl">
               <p class="text-base text-gray-500 text-ellipsis overflow-hidden leading-6 line-clamp-2">
@@ -173,15 +173,15 @@
                 <p class="text-blt-primary text-lg font-medium">21 March, 2025</p>
               </div>
 
-              <button type="submit"
-                class="bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
+              <button type="button"
+                class="comp-btn bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
             </div>
           </div>
 
           <!-- Card 5 -->
-          <div class="bg-gray-2 px-4.5 py-6 rounded-2xl">
+          <div class="task-card bg-gray-2 px-4.5 py-6 rounded-2xl">
             <p class="bg-white rounded-lg max-w-max px-4 py-2 text-blt-primary">Google LLC</p>
-            <h2 class="text-blt-primary font-medium text-2xl mt-4">Integrate OpenAI API </h2>
+            <h2 class="card-title text-blt-primary font-medium text-2xl mt-4">Integrate OpenAI API </h2>
 
             <div class="bg-white max-h-24 mt-4 p-4 overflow-hidden rounded-xl">
               <p class="text-base text-gray-500 text-ellipsis overflow-hidden leading-6 line-clamp-2">
@@ -198,15 +198,15 @@
                 <p class="text-blt-primary text-lg font-medium">21 March, 2025</p>
               </div>
 
-              <button type="submit"
-                class="bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
+              <button type="button"
+                class="comp-btn bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
             </div>
           </div>
 
           <!-- Card 6 -->
-          <div class="bg-gray-2 px-4.5 py-6 rounded-2xl">
+          <div class="task-card bg-gray-2 px-4.5 py-6 rounded-2xl">
             <p class="bg-white rounded-lg max-w-max px-4 py-2 text-blt-primary">Glassdoar</p>
-            <h2 class="text-blt-primary font-medium text-2xl mt-4">Improve Job Searching</h2>
+            <h2 class="card-title text-blt-primary font-medium text-2xl mt-4">Improve Job Searching</h2>
 
             <div class="bg-white max-h-24 mt-4 p-4 overflow-hidden rounded-xl">
               <p class="text-base text-gray-500 text-ellipsis overflow-hidden leading-6 line-clamp-2">
@@ -223,8 +223,8 @@
                 <p class="text-blt-primary text-lg font-medium">21 March, 2025</p>
               </div>
 
-              <button
-                class="bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
+              <button type="button"
+                class="comp-btn bg-blue-primary py-3 px-5 text-white rounded-xl cursor-pointer transition duration-150 ease-in-out hover:scale-102">Completed</button>
             </div>
           </div>
         </div>
@@ -232,7 +232,7 @@
       </div>
 
       <!-- Left Section: Activity Log -->
-      <div class="col-span-2 min-h-full bg-white rounded-2xl px-8 py-6">
+      <div id="activity-log" class="col-span-2 min-h-full bg-white rounded-2xl px-8 py-6">
         <div class="flex flex-col justify-center items-center">
           <div class="flex items-center gap-2 mb-4"><img src="./assets/activity.png" alt="">
             <p class="text-xl text-blt-primary font-medium">Activity Log</p>
@@ -243,6 +243,7 @@
         </div>
 
         <div class="border border-dashed border-purple-border mt-6"></div>
+        
       </div>
 
   </section>
