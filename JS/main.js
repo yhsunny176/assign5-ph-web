@@ -52,7 +52,9 @@ for (const btn of completeButton) {
     alert("Board Updated Successfully");
     
     // Reduce the task count when clicked
-    totalTaskCount.innerText = reduceTaskCount();
+    const updatedTaskCount = reduceTaskCount();
+    totalTaskCount.innerText = updatedTaskCount;
+    console.log(updatedTaskCount);
     
     //Update Completed tasks in Nav
     compTasksNav.innerText=incrementTaskCount();
@@ -72,7 +74,11 @@ for (const btn of completeButton) {
     btn.classList.remove("bg-blue-primary","text-white","cursor-pointer","transition","duration-150", "ease-in-out","hover:scale-102");
     btn.disabled = true;
     btn.classList.add("bg-gray-300","text-gray-400", "cursor-not-allowed");
-
+    
+    // Show alert if all task completed
+    if (updatedTaskCount === 0){
+      alert("Congrats!! You have Completed All the Current Tasks!");
+    }
   });
 }
 
