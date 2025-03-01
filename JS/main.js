@@ -117,5 +117,11 @@ colorChangeBtn.addEventListener("click", function() {
   newColor = randGenCol;
 });
 
+// Discover new
+const discoverCard = document.getElementById("discover-card");
+discoverCard.addEventListener("click",function(){
+  window.open('./blogs.html','_self');
+})
+
 
 
