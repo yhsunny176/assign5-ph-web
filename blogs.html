@@ -22,5 +22,48 @@
         </div>
       </nav>
     </header>
+    
+    <!-- Question & Answers Section -->
+    <section class="max-w-full py-12">
+
+      <h1 class="max-w-9/10 mx-auto font-bold text-2xl text-blt-primary flex justify-center items-center">Blogs</h1>
+      <!-- Question 1 -->
+      <div class="max-w-9/10 min-h-24 mx-auto bg-white rounded-2xl py-6 mt-8">
+        <h2 class="font-bold text-xl text-blt-primary mx-8">Question-1:What are the different ways to select and element in the DOM?</h2>
+        <div class="border border-dashed border-purple-border my-6"></div>
+        <p class="font-normal text-base text-blt-primary mx-8 opacity-70">
+          We can select elements in DOM in a few ways:
+          <br>1. Using <strong>getElementByID()</strong>: We can get the html element from the document by the id of that element using this method.
+          <br>2. Using <strong>getElementsByClassName()</strong>: We can get multiple/single html elements from the document by class name of that element using this method.
+          <br>3. Using <strong>getElementsByTagName()</strong>:  By using the tag name of an element we can get multiple/single html element using this method.
+          <br>4. Using <strong>querySelector()</strong>: We can get the first element from the document by using the CSS selector reference.
+          <br>5. Using <strong>querySelectorAll()</strong>: We can get all the html elements from the document by the CSS selector reference.
+        </p>
+      </div>
+      <!-- Question 2 -->
+      <div class="max-w-9/10 min-h-24 mx-auto bg-white rounded-2xl py-6 mt-8">
+        <h2 class="font-bold text-xl text-blt-primary mx-8">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+        <div class="border border-dashed border-purple-border my-6"></div>
+        <p class="font-normal text-base text-blt-primary mx-8 opacity-70"><strong>innerHTML</strong> is used to get the all the tags and texts within an element, on the other hand <strong>innerText</strong> returns only the text within the element and childs and not the tags itself, <strong>textContent</strong> also returns the text but all the tags, styles are ignored and also hidden text can be shown. </p>
+      </div>
+      <!-- Question 3 -->
+      <div class="max-w-9/10 min-h-24 mx-auto bg-white rounded-2xl py-6 mt-8">
+        <h2 class="font-bold text-xl text-blt-primary mx-8">Question-3: What is event delegation in the DOM?</h2>
+        <div class="border border-dashed border-purple-border my-6"></div>
+        <p class="font-normal text-base text-blt-primary mx-8 opacity-70">We can add an event listener to a parent element to handle events for all the childs of that element instead of adding event one by one to each child element. This makes the event management easier and efficient if there are similar elements. This process is called event delegation.</p>
+      </div>
+      <!-- Question 4 -->
+      <div class="max-w-9/10 min-h-24 mx-auto bg-white rounded-2xl py-6 mt-8">
+        <h2 class="font-bold text-xl text-blt-primary mx-8">Question-4: What is event bubbling in the DOM?</h2>
+        <div class="border border-dashed border-purple-border my-6"></div>
+        <p class="font-normal text-base text-blt-primary mx-8 opacity-70">In DOM tree each child element has it's parent, so suppose when we do click event to a child element it also means that we are doing the same event for the parent element. The event propagates backward to all it's parent until it reaches the root node(html). The event does not only happen at the clicked button. This process is called Event bubbling.</p>
+      </div>
+      <!-- Question 5 -->
+      <div class="max-w-9/10 min-h-24 mx-auto bg-white rounded-2xl py-6 mt-8">
+        <h2 class="font-bold text-xl text-blt-primary mx-8">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+        <div class="border border-dashed border-purple-border my-6"></div>
+        <p class="font-normal text-base text-blt-primary mx-8 opacity-70">We can create element using the createElement() method, Add element using the appendChild() method to the element that is created or existing element. We can remove element using the remove() or removeChild() method.</p>
+      </div>
+    </section>
 </body>
 </html>
